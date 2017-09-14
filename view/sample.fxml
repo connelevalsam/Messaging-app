@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.resource.Controller">
+  <children>
+    <SplitPane dividerPositions="0.336676217765043" focusTraversable="true" layoutX="0.0" layoutY="0.0" orientation="HORIZONTAL" prefHeight="600.0" prefWidth="700.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <VBox alignment="TOP_CENTER" layoutX="13.0" layoutY="7.0" prefHeight="565.0" prefWidth="205.0" spacing="10.0">
+              <children>
+                <Button fx:id="btnGeneral" mnemonicParsing="false" onAction="#msgGeneral" text="General" />
+                <Separator prefWidth="200.0" />
+                <Button id="btnGeneral" mnemonicParsing="false" onAction="#sendMessage" text="Message" />
+                <Separator prefWidth="200.0" />
+                <Button id="btnGeneral" mnemonicParsing="false" onAction="#createNew" text="Add New" />
+                <Separator prefWidth="200.0" />
+              </children>
+              <padding>
+                <Insets top="10.0" />
+              </padding>
+            </VBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <AnchorPane id="Content" fx:id="viewGeneral" layoutX="10.0" layoutY="11.0" minHeight="0.0" minWidth="0.0" prefHeight="583.0" prefWidth="446.0">
+              <children>
+                <TextArea layoutX="7.0" layoutY="47.0" prefHeight="250.0" prefWidth="402.0" wrapText="true" />
+                <Button layoutX="335.0" layoutY="326.0" mnemonicParsing="false" text="Send" />
+                <Button layoutX="247.0" layoutY="326.0" mnemonicParsing="false" text="Clear" />
+                <Text layoutX="212.0" layoutY="434.0" scaleX="1.0" scaleY="1.7929788332472896" strokeType="OUTSIDE" strokeWidth="0.0" text="General Message" textAlignment="CENTER" />
+              </children>
+            </AnchorPane>
+            <ScrollPane fx:id="viewMessage" layoutX="0.0" layoutY="1.0" prefHeight="589.0" prefWidth="460.0">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="583.0" prefWidth="446.0">
+                  <children>
+                    <HBox layoutX="7.0" layoutY="8.0" prefHeight="39.0" prefWidth="439.0">
+                      <children>
+                        <ComboBox fx:id="cbxClass" promptText="Class">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <ComboBox fx:id="cbxLevel" promptText="Level">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <ComboBox fx:id="cbxGender" promptText="Gender">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <ComboBox fx:id="cbxHealth" promptText="Health">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <ComboBox fx:id="cbxAge" promptText="Age">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                      </children>
+                    </HBox>
+                    <TextArea layoutX="7.0" layoutY="47.0" prefHeight="250.0" prefWidth="402.0" wrapText="true" />
+                    <Button layoutX="335.0" layoutY="326.0" mnemonicParsing="false" text="Send" />
+                    <Button layoutX="247.0" layoutY="326.0" mnemonicParsing="false" text="Clear" />
+                    <Text layoutX="212.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

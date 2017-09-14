@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.resource.Dashboard">
+  <children>
+    <SplitPane id="spAdminStudent" dividerPositions="0.4457831325301205" focusTraversable="true" layoutX="26.0" layoutY="14.0" prefHeight="572.0" prefWidth="749.0">
+      <items>
+        <AnchorPane id="acStudent" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <GridPane layoutX="12.0" layoutY="17.0" prefWidth="219.0">
+              <children>
+                <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField id="" fx:id="txtFirstName" prefHeight="25.0" prefWidth="79.0" promptText="first name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField id="" fx:id="txtLastName" prefHeight="25.0" prefWidth="79.0" promptText="last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button id="btnAdd" mnemonicParsing="false" onAction="#addContact" text="Add Contact" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label text="Class" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Level" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Gender" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField id="" fx:id="txtClass" prefHeight="25.0" prefWidth="79.0" promptText="Primary ?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField id="" fx:id="txtLevel" prefHeight="25.0" prefWidth="79.0" promptText="Primary 1 ?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField id="" fx:id="txtGender" prefHeight="25.0" prefWidth="79.0" promptText="M / F" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Health" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label text="Age" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <TextField id="" fx:id="txtHealth" prefHeight="25.0" prefWidth="79.0" promptText="Special ?" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField id="" fx:id="txtAge" prefHeight="25.0" prefWidth="79.0" promptText="Age" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <VBox layoutX="0.0" layoutY="292.0" prefHeight="266.0" prefWidth="330.0">
+              <children>
+                <Label text="Result Console">
+                  <font>
+                    <Font name="System Bold" size="12.0" />
+                  </font>
+                </Label>
+                <TextArea id="resultArea" fx:id="txtResultConsole" prefHeight="233.0" prefWidth="330.0" wrapText="true" />
+                <Button mnemonicParsing="false" onAction="#closeOperation" text="Close" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane id="acStudent1" minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="423.0">
+          <children>
+            <GridPane layoutX="29.0" layoutY="0.0" prefHeight="218.9998779296875" prefWidth="377.0">
+              <children>
+                <Label text="Contact ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="New Class" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                <TextField id="" fx:id="txtContactID" prefHeight="25.0" prefWidth="70.0" promptText="Contact ID" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField id="" fx:id="txtNewClass" prefHeight="25.0" prefWidth="120.0" promptText="new class" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <Button id="btnSearch" mnemonicParsing="false" onAction="#searchContact" prefHeight="25.0" prefWidth="70.0" text="Search" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button id="btnUpdate" mnemonicParsing="false" onAction="#updateContact" prefHeight="25.0" prefWidth="70.0" text="Update" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button id="btnDelete" mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="70.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button id="searchEmpsBtn" mnemonicParsing="false" onAction="#searchAllContact" prefHeight="25.0" prefWidth="150.0" text="Search All Contacts" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="72.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="74.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="76.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <ScrollPane layoutX="1.0" layoutY="212.0" prefHeight="358.0" prefWidth="405.0">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="770.0">
+                  <children>
+                    <TableView fx:id="contactTable" editable="true" layoutX="4.0" layoutY="0.0" prefHeight="340.0" prefWidth="750.0" tableMenuButtonVisible="true">
+                      <columns>
+                        <TableColumn prefWidth="57.0" text="Id" fx:id="contactIDColumn" />
+                        <TableColumn prefWidth="100.0" text="first name" fx:id="contactFirstNameColumn" />
+                        <TableColumn prefWidth="100.0" text="last name" fx:id="contactLastNameColumn" />
+                        <TableColumn prefWidth="100.0" text="class" fx:id="contactClassGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="level" fx:id="contactLevelGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="gender" fx:id="contactGenderGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="health" fx:id="contactHealthGroupColumn" />
+                        <TableColumn prefWidth="70.0" text="age" fx:id="contactAgeGroupColumn" />
+                      </columns>
+                    </TableView>
+                  </children>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

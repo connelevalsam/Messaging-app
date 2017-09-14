@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.resource.Login">
+  <children>
+    <VBox alignment="CENTER" layoutX="148.0" layoutY="81.0" prefHeight="200.0" prefWidth="307.0" spacing="20.0">
+      <children>
+        <TextField fx:id="txtUsername" prefHeight="45.0" prefWidth="307.0" promptText="username" />
+        <PasswordField fx:id="txtPassword" prefHeight="42.0" prefWidth="307.0" promptText="password" />
+        <Button fx:id="btnLogin" defaultButton="true" mnemonicParsing="false" onAction="#login" text="Login" />
+      </children>
+    </VBox>
+    <Label alignment="CENTER" layoutX="186.0" layoutY="21.0" prefHeight="45.0" prefWidth="212.0" text="La Bells Int'l School" textAlignment="CENTER">
+      <font>
+        <Font name="Georgia Bold" size="15.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
