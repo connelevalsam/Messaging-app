@@ -6,6 +6,7 @@ import sample.util.DBUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * Created by connelblaze on 5/10/17.
@@ -38,8 +39,8 @@ public class ContactDAO {
         if (rs.next()) {
             contactClass = new ContactClass();
             contactClass.setContactId(rs.getInt("id"));
-            contactClass.setFirstName(rs.getString("first_name"));
-            contactClass.setLastName(rs.getString("last_name"));
+            contactClass.setFullName(rs.getString("full_name"));
+            contactClass.setPHONE(rs.getString("phone"));
             contactClass.setClassGroup(rs.getString("class_group"));
             contactClass.setLevelGroup(rs.getString("level_group"));
             contactClass.setGenderGroup(rs.getString("gender_group"));
@@ -73,6 +74,17 @@ public class ContactDAO {
         }
     }
 
+    //list out contacts into array
+    public static ArrayList getEmContacts(String classGroup, String levelGroup, int ageGroup ) throws SQLException, ClassNotFoundException {
+        ArrayList list = new ArrayList();
+        String query = "SELECT phone FROM users WHERE class_group = '"+ classGroup + "' AND level_group = '" + levelGroup + "' AND (age_group = '" + ageGroup + "');";
+        ResultSet rsContacts = DBUtil.dbExecuteQuery(query);
+        while (rsContacts.next()) {
+            list.add(rsContacts.getString("phone"));
+        }
+        return list;
+    }
+
     //Select * from contacts operation
     private static ObservableList<ContactClass> getContactList(ResultSet rs) throws SQLException, ClassNotFoundException {
         //Declare a observable List which comprises of contact objects
@@ -81,8 +93,8 @@ public class ContactDAO {
         while (rs.next()) {
             ContactClass contactClass = new ContactClass();
             contactClass.setContactId(rs.getInt("id"));
-            contactClass.setFirstName(rs.getString("first_name"));
-            contactClass.setLastName(rs.getString("last_name"));
+            contactClass.setFullName(rs.getString("full_name"));
+            contactClass.setPHONE(rs.getString("phone"));
             contactClass.setClassGroup(rs.getString("class_group"));
             contactClass.setLevelGroup(rs.getString("level_group"));
             contactClass.setGenderGroup(rs.getString("gender_group"));
@@ -130,9 +142,9 @@ public class ContactDAO {
     //*************************************
     //INSERT a contact
     //*************************************
-    public static void insertContact(String firstName, String lastName, String classGroup, String levelGroup, String genderGroup, String healthGroup, int ageGroup) throws SQLException, ClassNotFoundException {
+    public static void insertContact(String fullName, String phone, String classGroup, String levelGroup, String genderGroup, String healthGroup, int ageGroup) throws SQLException, ClassNotFoundException {
         //Declare a DELETE statement
-        String updateStmt = "INSERT INTO users (first_name, last_name, class_group, level_group, gender_group, health_group, age_group) VALUES ('" + firstName + "', '" + lastName + "', '" + classGroup + "', '" + levelGroup + "', '" + genderGroup + "', '" + healthGroup + "', '" + ageGroup + "');";
+        String updateStmt = "INSERT INTO users (full_name, phone, class_group, level_group, gender_group, health_group, age_group) VALUES ('" + fullName + "', '" + phone + "', '" + classGroup + "', '" + levelGroup + "', '" + genderGroup + "', '" + healthGroup + "', '" + ageGroup + "');";
 
         //Execute DELETE operation
         try {

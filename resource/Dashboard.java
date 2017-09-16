@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
  */
 public class Dashboard implements Initializable {
     @FXML
-    TextField txtFirstName,txtLastName,txtClass,txtLevel,txtGender,txtHealth,txtAge,txtContactID,txtNewClass;
+    TextField txtFullName,txtPhone,txtClass,txtLevel,txtGender,txtHealth,txtAge,txtContactID,txtNewClass;
     @FXML
     TextArea txtResultConsole;
 
@@ -35,9 +35,9 @@ public class Dashboard implements Initializable {
     @FXML
     private TableColumn<ContactClass, Integer> contactIDColumn;
     @FXML
-    private TableColumn<ContactClass, String>  contactFirstNameColumn;
+    private TableColumn<ContactClass, String>  contactFullNameColumn;
     @FXML
-    private TableColumn<ContactClass, String>  contactLastNameColumn;
+    private TableColumn<ContactClass, String>  contactPhoneColumn;
     @FXML
     private TableColumn<ContactClass, String> contactClassGroupColumn;
     @FXML
@@ -56,8 +56,8 @@ public class Dashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         contactIDColumn.setCellValueFactory(cellData -> cellData.getValue().contactIdProperty().asObject());
-        contactFirstNameColumn.setCellValueFactory(cellData -> cellData.getValue().FirstNameProperty());
-        contactLastNameColumn.setCellValueFactory(cellData -> cellData.getValue().LastNameProperty());
+        contactFullNameColumn.setCellValueFactory(cellData -> cellData.getValue().FullNameProperty());
+        contactPhoneColumn.setCellValueFactory(cellData -> cellData.getValue().PhoneProperty());
         contactClassGroupColumn.setCellValueFactory(cellData -> cellData.getValue().ClassGroupProperty());
         contactLevelGroupColumn.setCellValueFactory(cellData -> cellData.getValue().LevelGroupProperty());
         contactGenderGroupColumn.setCellValueFactory(cellData -> cellData.getValue().GenderGroupProperty());
@@ -78,7 +78,7 @@ public class Dashboard implements Initializable {
     //Set contact information to Text Area
     @FXML
     private void setContactInfoToTextArea ( ContactClass contact) {
-        txtResultConsole.setText("Name: " + contact.getFirstName() + contact.getLastName()+"\n" +
+        txtResultConsole.setText("Name: " + contact.getFullName() +"\nPhone "+ contact.getPhone()+"\n" +
                 "Contact ID: " + contact.getContactId());
     }
     //Populate Contact for TableView and Display Contact on TextArea
@@ -102,7 +102,7 @@ public class Dashboard implements Initializable {
     public void addContact(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         try {
             int contactAge = Integer.parseInt(txtAge.getText());
-            ContactDAO.insertContact(txtFirstName.getText(),txtLastName.getText(),txtClass.getText(),txtLevel.getText(),txtGender.getText(),txtHealth.getText(),contactAge);
+            ContactDAO.insertContact(txtFullName.getText(),txtPhone.getText(),txtClass.getText(),txtLevel.getText(),txtGender.getText(),txtHealth.getText(),contactAge);
 
             txtResultConsole.setText("contact added! \n");
         } catch (SQLException e) {

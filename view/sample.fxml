@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.resource.Controller">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="720.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.resource.Controller">
   <children>
-    <SplitPane dividerPositions="0.336676217765043" focusTraversable="true" layoutX="0.0" layoutY="0.0" orientation="HORIZONTAL" prefHeight="600.0" prefWidth="700.0">
+    <SplitPane dividerPositions="0.3412256267409471" focusTraversable="true" layoutX="0.0" layoutY="0.0" orientation="HORIZONTAL" prefHeight="600.0" prefWidth="720.0">
       <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
           <children>
@@ -42,49 +42,47 @@
                 <Text layoutX="212.0" layoutY="434.0" scaleX="1.0" scaleY="1.7929788332472896" strokeType="OUTSIDE" strokeWidth="0.0" text="General Message" textAlignment="CENTER" />
               </children>
             </AnchorPane>
-            <ScrollPane fx:id="viewMessage" layoutX="0.0" layoutY="1.0" prefHeight="589.0" prefWidth="460.0">
+            <ScrollPane fx:id="viewMessage" layoutX="0.0" layoutY="1.0" prefHeight="589.0" prefWidth="470.0">
               <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="583.0" prefWidth="446.0">
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="583.0" prefWidth="456.0">
                   <children>
-                    <HBox layoutX="7.0" layoutY="8.0" prefHeight="39.0" prefWidth="439.0">
+                    <HBox layoutX="7.0" layoutY="8.0" prefHeight="39.0" prefWidth="456.0">
                       <children>
-                        <ComboBox fx:id="cbxClass" promptText="Class">
+                        <ComboBox fx:id="cbxClass" prefWidth="121.0" promptText="Class">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Item 1" />
-                              <String fx:value="Item 2" />
-                              <String fx:value="Item 3" />
+                              <String fx:value="Primary 1" />
+                              <String fx:value="Primary 2" />
+                              <String fx:value="Primary 3" />
+                              <String fx:value="Primary 4" />
                             </FXCollections>
                           </items>
                         </ComboBox>
-                        <ComboBox fx:id="cbxLevel" promptText="Level">
+                        <ComboBox fx:id="cbxLevel" prefWidth="85.0" promptText="Level">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Item 1" />
-                              <String fx:value="Item 2" />
-                              <String fx:value="Item 3" />
+                              <String fx:value="A" />
+                              <String fx:value="B" />
                             </FXCollections>
                           </items>
                         </ComboBox>
-                        <ComboBox fx:id="cbxGender" promptText="Gender">
+                        <ComboBox fx:id="cbxGender" prefWidth="74.0" promptText="Gender">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Item 1" />
-                              <String fx:value="Item 2" />
-                              <String fx:value="Item 3" />
+                              <String fx:value="Male" />
+                              <String fx:value="Female" />
                             </FXCollections>
                           </items>
                         </ComboBox>
-                        <ComboBox fx:id="cbxHealth" promptText="Health">
+                        <ComboBox fx:id="cbxHealth" prefWidth="95.0" promptText="Health">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Item 1" />
-                              <String fx:value="Item 2" />
-                              <String fx:value="Item 3" />
+                              <String fx:value="Yes" />
+                              <String fx:value="No" />
                             </FXCollections>
                           </items>
                         </ComboBox>
-                        <ComboBox fx:id="cbxAge" promptText="Age">
+                        <ComboBox fx:id="cbxAge" prefWidth="80.0" promptText="Age">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
                               <String fx:value="Item 1" />
@@ -95,9 +93,9 @@
                         </ComboBox>
                       </children>
                     </HBox>
-                    <TextArea layoutX="7.0" layoutY="47.0" prefHeight="250.0" prefWidth="402.0" wrapText="true" />
-                    <Button layoutX="335.0" layoutY="326.0" mnemonicParsing="false" text="Send" />
-                    <Button layoutX="247.0" layoutY="326.0" mnemonicParsing="false" text="Clear" />
+                    <TextArea fx:id="txtMessage" layoutX="7.0" layoutY="47.0" prefHeight="250.0" prefWidth="402.0" wrapText="true" />
+                    <Button layoutX="335.0" layoutY="326.0" mnemonicParsing="false" onAction="#sendMsg" text="Send" />
+                    <Button layoutX="247.0" layoutY="326.0" mnemonicParsing="false" onAction="#resetApp" text="Clear" />
                     <Text layoutX="212.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
                   </children>
                 </AnchorPane>

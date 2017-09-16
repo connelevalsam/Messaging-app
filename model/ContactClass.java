@@ -11,8 +11,8 @@ import javafx.beans.property.StringProperty;
 public class ContactClass {
     //Declare Student Table Columns
     private IntegerProperty ID;
-    private StringProperty  FIRSTNAME;
-    private StringProperty  LASTNAME;
+    private StringProperty  FULLNAME;
+    private StringProperty  PHONE;
     private StringProperty  CLASSGROUP;
     private StringProperty  LEVELGROUP;
     private StringProperty  GENDERGROUP;
@@ -22,8 +22,8 @@ public class ContactClass {
     //Constructor
     public ContactClass() {
         this.ID          = new SimpleIntegerProperty();
-        this.FIRSTNAME   = new SimpleStringProperty();
-        this.LASTNAME    = new SimpleStringProperty();
+        this.FULLNAME    = new SimpleStringProperty();
+        this.PHONE       = new SimpleStringProperty();
         this.CLASSGROUP  = new SimpleStringProperty();
         this.LEVELGROUP  = new SimpleStringProperty();
         this.GENDERGROUP = new SimpleStringProperty();
@@ -46,31 +46,31 @@ public class ContactClass {
     }
 
 
-    //first name
-    public String getFirstName () {
-        return FIRSTNAME.get();
+    //full name
+    public String getFullName () {
+        return FULLNAME.get();
     }
 
-    public void setFirstName(String firstName){
-        this.FIRSTNAME.set(firstName);
+    public void setFullName(String fullName){
+        this.FULLNAME.set(fullName);
     }
 
-    public StringProperty FirstNameProperty() {
-        return FIRSTNAME;
+    public StringProperty FullNameProperty() {
+        return FULLNAME;
     }
 
 
-    //last name
-    public String getLastName () {
-        return LASTNAME.get();
+    //phone number
+    public String getPhone () {
+        return PHONE.get();
     }
 
-    public void setLastName(String lastName){
-        this.LASTNAME.set(lastName);
+    public void setPHONE(String phone){
+        this.PHONE.set(phone);
     }
 
-    public StringProperty LastNameProperty() {
-        return LASTNAME;
+    public StringProperty PhoneProperty() {
+        return PHONE;
     }
 
 

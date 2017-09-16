@@ -15,10 +15,10 @@
           <children>
             <GridPane layoutX="12.0" layoutY="17.0" prefWidth="219.0">
               <children>
-                <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <TextField id="" fx:id="txtFirstName" prefHeight="25.0" prefWidth="79.0" promptText="first name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <TextField id="" fx:id="txtLastName" prefHeight="25.0" prefWidth="79.0" promptText="last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Full Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField id="" fx:id="txtFullName" prefHeight="25.0" prefWidth="79.0" promptText="full name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Phone" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField id="" fx:id="txtPhone" prefHeight="25.0" prefWidth="79.0" promptText="phone number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Button id="btnAdd" mnemonicParsing="false" onAction="#addContact" text="Add Contact" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <Label text="Class" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                 <Label text="Level" GridPane.columnIndex="0" GridPane.rowIndex="3" />
@@ -28,7 +28,7 @@
                 <TextField id="" fx:id="txtGender" prefHeight="25.0" prefWidth="79.0" promptText="M / F" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label text="Health" GridPane.columnIndex="0" GridPane.rowIndex="5" />
                 <Label text="Age" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-                <TextField id="" fx:id="txtHealth" prefHeight="25.0" prefWidth="79.0" promptText="Special ?" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField id="" fx:id="txtHealth" prefHeight="25.0" prefWidth="79.0" promptText="Health Issues ?" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                 <TextField id="" fx:id="txtAge" prefHeight="25.0" prefWidth="79.0" promptText="Age" GridPane.columnIndex="1" GridPane.rowIndex="6" />
               </children>
               <columnConstraints>
@@ -90,14 +90,14 @@
                   <children>
                     <TableView fx:id="contactTable" editable="true" layoutX="4.0" layoutY="0.0" prefHeight="340.0" prefWidth="750.0" tableMenuButtonVisible="true">
                       <columns>
-                        <TableColumn prefWidth="57.0" text="Id" fx:id="contactIDColumn" />
-                        <TableColumn prefWidth="100.0" text="first name" fx:id="contactFirstNameColumn" />
-                        <TableColumn prefWidth="100.0" text="last name" fx:id="contactLastNameColumn" />
-                        <TableColumn prefWidth="100.0" text="class" fx:id="contactClassGroupColumn" />
-                        <TableColumn prefWidth="100.0" text="level" fx:id="contactLevelGroupColumn" />
-                        <TableColumn prefWidth="100.0" text="gender" fx:id="contactGenderGroupColumn" />
-                        <TableColumn prefWidth="100.0" text="health" fx:id="contactHealthGroupColumn" />
-                        <TableColumn prefWidth="70.0" text="age" fx:id="contactAgeGroupColumn" />
+                        <TableColumn prefWidth="57.0" text="Id"         fx:id="contactIDColumn" />
+                        <TableColumn prefWidth="100.0" text="full name" fx:id="contactFullNameColumn" />
+                        <TableColumn prefWidth="100.0" text="phone"     fx:id="contactPhoneColumn" />
+                        <TableColumn prefWidth="100.0" text="class"     fx:id="contactClassGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="level"     fx:id="contactLevelGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="gender"    fx:id="contactGenderGroupColumn" />
+                        <TableColumn prefWidth="100.0" text="health"    fx:id="contactHealthGroupColumn" />
+                        <TableColumn prefWidth="70.0" text="age"        fx:id="contactAgeGroupColumn" />
                       </columns>
                     </TableView>
                   </children>

@@ -18,7 +18,7 @@ public class DBUtil {
     private static final String connStr = "jdbc:mysql://localhost/MessagingJavaDB";
     //Database credentials
     static final String USER = "root";
-    static final String PASSWORD = "xxx";
+    static final String PASSWORD = "elemie";
 
 
     //Connect to DB
@@ -53,6 +53,32 @@ public class DBUtil {
         } catch (Exception e){
             throw e;
         }
+    }
+
+    //Return connection
+    public static Connection getConn()  throws SQLException, ClassNotFoundException {
+        //Setting Oracle JDBC Driver
+        try {
+            Class.forName(JDBC_DRIVER);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Where is your MySql JDBC Driver?");
+            e.printStackTrace();
+            throw e;
+        }
+
+        System.out.println("MySql JDBC Driver Registered!");
+
+        //Establish the Oracle Connection using Connection String
+        try {
+            conn = DriverManager.getConnection(connStr, USER, PASSWORD);
+            return conn;
+        } catch (SQLException e) {
+            System.out.println("Connection Failed! Check output console" + e);
+            e.printStackTrace();
+            throw e;
+        }/* finally {
+            dbDisconnect();
+        }*/
     }
 
     //DB Execute Query Operation
