@@ -180,8 +180,8 @@ public class Controller implements Initializable {
     public void messageAPI(ArrayList recipients, String messageBox) {
         try {
             String xmlrecipients = "";
-            String username = "david.ekefre@gmail.com";
-            String apikey = "852b5f81b9dab0f60df72cd21c671caf4646a012";
+            String username = "connelblaze";
+            String apikey = "hkajsbdjhjlhdlajbdlbljbaljfhkey";
             String sendername = "connelblaze";
             String message = messageBox;
             String flash = "0";
