@@ -18,7 +18,7 @@ public class DBUtil {
     private static final String connStr = "jdbc:mysql://localhost/MessagingJavaDB";
     //Database credentials
     static final String USER = "root";
-    static final String PASSWORD = "x";
+    static final String PASSWORD = "elemie";
 
 
     //Connect to DB
@@ -76,9 +76,7 @@ public class DBUtil {
             System.out.println("Connection Failed! Check output console" + e);
             e.printStackTrace();
             throw e;
-        }/* finally {
-            dbDisconnect();
-        }*/
+        }
     }
 
     //DB Execute Query Operation

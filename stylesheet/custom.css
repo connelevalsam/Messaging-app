@@ -1,0 +1,57 @@
+root {
+    display: block;
+    -fx-font-family: "chiller";
+}
+
+.root {
+     -fx-background-image: url("../res/login.jpeg");
+     -fx-font-family: "chiller";
+}
+
+.adminDashboard {
+    -fx-background-image: url("../res/bg2.jpg");
+    -fx-font-family: "chiller";
+}
+
+.sample {
+    -fx-background-image: url("../res/bg1.jpg");
+    -fx-font-family: "chiller";
+}
+
+#landingPage {
+    -fx-background-image: url("../res/bg3.jpg");
+    -fx-font-family: "chiller";
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #515151;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#messageTab {
+   -fx-font-size: 26px;
+   -fx-font-family: "chiller";
+   -fx-fill: #818181;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#aTarget {
+  -fx-fill: FIREBRICK;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "chiller";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
