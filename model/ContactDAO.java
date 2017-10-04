@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.util.DBUtil;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -74,17 +75,6 @@ public class ContactDAO {
         }
     }
 
-    //list out contacts into array
-    public static ArrayList getEmContacts(String classGroup, String levelGroup, int ageGroup ) throws SQLException, ClassNotFoundException {
-        ArrayList list = new ArrayList();
-        String query = "SELECT phone FROM users WHERE class_group = '"+ classGroup + "' AND level_group = '" + levelGroup + "' AND (age_group = '" + ageGroup + "');";
-        ResultSet rsContacts = DBUtil.dbExecuteQuery(query);
-        while (rsContacts.next()) {
-            list.add(rsContacts.getString("phone"));
-        }
-        return list;
-    }
-
     //Select * from contacts operation
     private static ObservableList<ContactClass> getContactList(ResultSet rs) throws SQLException, ClassNotFoundException {
         //Declare a observable List which comprises of contact objects
@@ -146,7 +136,7 @@ public class ContactDAO {
         //Declare a DELETE statement
         String updateStmt = "INSERT INTO users (full_name, phone, class_group, level_group, gender_group, health_group, age_group) VALUES ('" + fullName + "', '" + phone + "', '" + classGroup + "', '" + levelGroup + "', '" + genderGroup + "', '" + healthGroup + "', '" + ageGroup + "');";
 
-        //Execute DELETE operation
+        //Execute INSERT operation
         try {
             DBUtil.dbExecuteUpdate(updateStmt);
         } catch (SQLException e) {
