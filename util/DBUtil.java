@@ -18,7 +18,7 @@ public class DBUtil {
     private static final String connStr = "jdbc:mysql://localhost/MessagingJavaDB";
     //Database credentials
     static final String USER = "root";
-    static final String PASSWORD = "elemie";
+    static final String PASSWORD = "root";
 
 
     //Connect to DB
